@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: pink;
+}
+
+body {
+    color:white;
+    text-align: center;
+}
+
+footer {
+    font-family: monospace;
+    text-align: right;
+}
