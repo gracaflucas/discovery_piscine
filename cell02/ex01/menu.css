@@ -1,0 +1,19 @@
+* {
+  background-color: bisque;
+}
+
+.dropdown {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: palegreen;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
