@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>It's over 9000</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+
+        input, select {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="text" id="left">
+    
+    <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+
+    <input type="text" id="right">
+
+    <input type="submit" value="Try me!" id="button">
+
+<script>
+    const left = document.getElementById("left");
+    const right = document.getElementById("right");
+    const operator = document.getElementById("operator");
+    const button = document.getElementById("button");
+
+    button.addEventListener("click", () => {
+        const a = left.value;
+        const b = right.value;
+        const op = operator.value;
+
+        if (!isPositiveInteger(a) || !isPositiveInteger(b)) {
+            alert("Error :(");
+            return;
+        }
+
+        const x = Number(a);
+        const y = Number(b);
+
+        if ((op === "/" || op === "%") && y === 0) {
+            alert("It's over 9000!");
+            console.log("It's over 9000!");
+            return;
+        }
+
+        let result;
+
+        switch (op) {
+            case "+":
+                result = x + y;
+                break;
+            case "-":
+                result = x - y;
+                break;
+            case "*":
+                result = x * y;
+                break;
+            case "/":
+                result = x / y;
+                break;
+            case "%":
+                result = x % y;
+                break;
+        }
+
+        alert(result);
+        console.log(result);
+    });
+
+    function isPositiveInteger(value) {
+        if (value === "")
+            return false;
+        const n = Number(value);
+        return Number.isInteger(n) && n >= 0;
+    }
+
+    setInterval(() => {
+        alert("Please, use me...");
+    }, 30000);
+</script>
+
+</body>
+</html>

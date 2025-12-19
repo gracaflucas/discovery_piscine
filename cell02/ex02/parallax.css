@@ -1,1 +1,41 @@
-https://blog.logrocket.com/create-parallax-scrolling-css/
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.parallax {
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax-2 {
+    background-image: url("https://t4.ftcdn.net/jpg/08/77/17/19/360_F_877171906_ACseyJGeSvNqmhN61fA2V6umdNTdrnz3.jpg");
+}
+
+.parallax-1 {
+    background-image: url("https://img.freepik.com/free-vector/evening-cloudy-sky-purple-background-with-group-cumulus-cirrus-clouds-flat-cartoon-illustration_1284-62768.jpg?semt=ais_hybrid&w=740&q=80");
+}
+
+.content {
+    height: 300px;
+    background-color: burlywood;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    color: black;
+    font-size: 50px;
+    text-align: center;
+}

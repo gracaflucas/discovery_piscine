@@ -9,11 +9,11 @@
 
 .dropdown-content {
   display: none;
-  position: absolute;
   background-color: palegreen;
+  margin-bottom: 5px;
+  max-width: 300px;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
-
